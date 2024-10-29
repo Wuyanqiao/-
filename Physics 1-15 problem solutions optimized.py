@@ -1,4 +1,4 @@
-# Author: WYQ
+# Author: Wu Yanqiao
 # Description: 模拟空降兵从飞机跳出后的运动，考虑重力和空气阻力的影响。通过数值积分计算运动随时间的变化，使用机器学习对速度数据进行拟合，以优化收尾速度的估计，并绘制相关的速度和高度变化曲线。
 
 import numpy as np
@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 
-# 使用机器学习优化速度数据
+# 机器学习优化数据
+ # 初始化参数
 
 def simulate_motion(m, k, g, v_initial_y, v_initial_x, dt, t_max):
-    # 初始化参数
     t = 0  # 初始时间 (s)
     y = 2000  # 初始高度 (m)
     v_y = v_initial_y  # 初始垂直速度 (m/s)
@@ -57,19 +57,19 @@ t_max = 300  # 最大模拟时间 (s)
 # 模拟运动
 t_values, y_values, v_y_values, v_x_values, v_total_values = simulate_motion(m, k, g, v_initial_y, v_initial_x, dt, t_max)
 
-# 使用机器学习对速度数据进行拟合，以优化收尾速度估计
+#优化收尾速度估计 ： 机器学习对速度数据进行拟合
 poly = PolynomialFeatures(degree=3)  # 创建三次多项式特征
 # 将时间值转换为numpy数组并进行多项式特征转换
 t_values_np = np.array(t_values).reshape(-1, 1)
 v_total_values_np = np.array(v_total_values).reshape(-1, 1)
 t_poly = poly.fit_transform(t_values_np)
 
-# 使用线性回归模型对数据进行拟合
+# 线性回归模型拟合数据
 model = LinearRegression()
 model.fit(t_poly, v_total_values_np)
 v_total_pred = model.predict(t_poly)  # 预测总速度值
 
-# 确定开伞的最佳时间（垂直速度达到最小值时）
+# 确定垂直速度达到最小值时的速度
 v_min = min(v_y_values)  # 找到垂直速度的最小值
 v_min_index = v_y_values.index(v_min)  # 最小值对应的索引
 t_best = t_values[v_min_index]  # 开伞的最佳时间
@@ -101,6 +101,6 @@ plt.legend()  # 图例
 plt.grid()  # 网格线
 plt.show()
 
-# 打印开伞的最佳时间和最佳收尾速度
-print(f'最佳开伞时间: {t_best:.2f} s')  # 输出最佳开伞时间
-print(f'最佳收尾速率 (predicted): {v_terminal:.2f} m/s')  # 输出最佳收尾速度（预测）
+# 输出开伞的最佳时间和最佳收尾速度
+print(f'最佳开伞时间: {t_best:.2f} s') 
+print(f'最佳收尾速率 (predicted): {v_terminal:.2f} m/s')  
