@@ -13,15 +13,15 @@ void delay_ms(u16 ms)
         for (j = 0; j < 255; j++); 
 }
 
- void Delay_10us(unsigned int time)
+ void Delay_10us(u16 time)
  {
 	while(time--);
  }
  
 void main()
 {
-	unsigned char i = 0;
-	unsigned int t = 0;
+	u8 i = 0;
+	u16 t = 0;
 	P2 = 0xff;    //8个灯全部灭
 	while(1)
 	{
