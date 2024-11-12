@@ -1,11 +1,11 @@
 #include <REGX51.H>
 #include <INTRINS.h>
 
-// Ğ´Ò»¸ö¿ÉÒÔµ÷ÓÃµÄº¯Êı
+// å†™ä¸€ä¸ªå¯ä»¥è°ƒç”¨çš„å‡½æ•°
 typedef unsigned int u16;
 typedef unsigned char u8;
 
-// ÑÓÊ±º¯Êı
+// å»¶æ—¶å‡½æ•°
 void delay_ms(u16 ms)
 {
     u16 i, j;
@@ -22,7 +22,7 @@ void main()
 {
 	unsigned char i = 0;
 	unsigned int t = 0;
-	P2 = 0xff;    //8¸öµÆÈ«²¿Ãğ
+	P2 = 0xff;    //8ä¸ªç¯å…¨éƒ¨ç­
 	while(1)
 	{
 		for(i = 0; i < 8; i++)
