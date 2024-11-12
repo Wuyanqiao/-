@@ -6,7 +6,7 @@ int main()
 	int choice1 = 0, choice2 = 0, choice3 = 0;
 	while (true) 
 	{
-		std::cout << "Which function do you want to use£¿\n";
+		std::cout << "Which function do you want to useÂ£Â¿\n";
 		std::cout << "Please input 1(Dot Product) or 2(Cross Product) to choose function!\n";
 		std::cin >> choice1;
 		std::cout << "------------------------------------------------------------------------------\n";
@@ -15,7 +15,7 @@ int main()
 		{
 			dotProduct();
 
-			std::cout << "Input 1 to choose another function or input anyother number to break£º";
+			std::cout << "Input 1 to choose another function or input anyother number to breakÂ£Âº";
 			std::cin >> choice2;
 			std::cout << "------------------------------------------------------------------------------\n";
 
@@ -33,7 +33,7 @@ int main()
 		{
 			crossProduct();
 
-			std::cout << "Input 1 to choose another function or input anyother number to break£º";
+			std::cout << "Input 1 to choose another function or input anyother number to breakÂ£Âº";
 			std::cin >> choice3;
 			std::cout << "------------------------------------------------------------------------------\n";
 
