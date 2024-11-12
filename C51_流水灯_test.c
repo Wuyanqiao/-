@@ -1,16 +1,16 @@
 #include <REGX51.H>
 #include <INTRINS.h>
 
-// Ğ´Ò»¸ö¿ÉÒÔµ÷ÓÃµÄº¯Êı
+// å†™ä¸€ä¸ªå¯ä»¥è°ƒç”¨çš„å‡½æ•°
 typedef unsigned int u16;
 typedef unsigned char u8;
 
-// ÑÓÊ±º¯Êı
+// å»¶æ—¶å‡½æ•°
 void delay_ms(u16 ms)
 {
     u16 i, j;
     for (i = 0; i < ms; i++)
-        for (j = 0; j < 255; j++); // Ôö¼ÓÑ­»·´ÎÊıÒÔÌá¸ßÑÓÊ±¾«¶È
+        for (j = 0; j < 255; j++); // å¢åŠ å¾ªç¯æ¬¡æ•°ä»¥æé«˜å»¶æ—¶ç²¾åº¦
 }
  
 
