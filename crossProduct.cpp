@@ -4,7 +4,7 @@
 
 int crossProduct()
 {
-	char selectf;  // Ñ¡Ôñ±äÁ¿
+	char selectf;  // é€‰æ‹©å˜é‡
 	while (true) 
 	{
 		float* CrossProductarray = new float[ArraySize] {0};
@@ -36,7 +36,7 @@ int crossProduct()
 		delete[] array3;
 		delete[] array4;
 
-		std::cout << "Do you want to continue? Input Y to continue and input N to break£º";
+		std::cout << "Do you want to continue? Input Y to continue and input N to breakÂ£Âº";
 		std::cin >> selectf;
 
 		if (selectf == 'Y')
