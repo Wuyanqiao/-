@@ -7,35 +7,35 @@ dotProduct And crossProduct function
 
 int dotProduct()
 {
-	int N = 0;  // Êı×é´óĞ¡±äÁ¿
-	float DotProduct = 0;  // ½á¹û±äÁ¿
-	char selectf;  // Ñ¡Ôñ±äÁ¿
+	int N = 0;  // æ•°ç»„å¤§å°å˜é‡
+	float DotProduct = 0;  // ç»“æœå˜é‡
+	char selectf;  // é€‰æ‹©å˜é‡
 
-	while (true)  // ³ÌĞòÑ­»·
+	while (true)  // ç¨‹åºå¾ªç¯
 	{
 		std::cout << "Please input the size of your array N(0<N<10)\n";
-		std::cin >> N;  // ÓÃ»§ÊäÈëÊı×é´óĞ¡
+		std::cin >> N;  // ç”¨æˆ·è¾“å…¥æ•°ç»„å¤§å°
 
-		// ±ØÒªµÄÓÃ»§ÊäÈë¼ì²â
-		if (N <= 0)  // ¸ºÊıÍË³öÑ­»·
+		// å¿…è¦çš„ç”¨æˆ·è¾“å…¥æ£€æµ‹
+		if (N <= 0)  // è´Ÿæ•°é€€å‡ºå¾ªç¯
 		{
 			std::cout << "The N is negative!\n";
 			break;
 		}
-		else if (N >= 10)  // ´óÓÚ10µÄÊı×ÖÖØĞÂÊäÈë
+		else if (N >= 10)  // å¤§äº10çš„æ•°å­—é‡æ–°è¾“å…¥
 		{
 			std::cout << "The N is too large!Please input it again!\n";
 			continue;
 		}
-		else  // ÓĞĞ§Êı×Ö¿ªÊ¼½øĞĞ³ÌĞò¼ÆËã
+		else  // æœ‰æ•ˆæ•°å­—å¼€å§‹è¿›è¡Œç¨‹åºè®¡ç®—
 		{
-			// ¶¨Òå¶¯Ì¬Êı×é£¬Ö¸Õë·ÖÅäÄÚ´æ
+			// å®šä¹‰åŠ¨æ€æ•°ç»„ï¼ŒæŒ‡é’ˆåˆ†é…å†…å­˜
 			float* array1 = new float[N];
 			float* array2 = new float[N];
 
 			std::cout << "First array:\n";
 
-			// Ñ­»·¸³Öµ
+			// å¾ªç¯èµ‹å€¼
 			for (int i = 0; i < N; ++i)
 			{
 				std::cin >> array1[i];
@@ -43,25 +43,25 @@ int dotProduct()
 
 			std::cout << "Next array:\n";
 
-			// Ñ­»·¸³Öµ
+			// å¾ªç¯èµ‹å€¼
 			for (int i = 0; i < N; ++i)
 			{
 				std::cin >> array2[i];
 			}
 
-			// ¼ÆËã½á¹û
+			// è®¡ç®—ç»“æœ
 			for (int i = 0; i < N; ++i)
 			{
 				DotProduct += array1[i] * array2[i];
 			}
 
-			// Êä³ö½á¹û
+			// è¾“å‡ºç»“æœ
 			std::cout << "The result is:" << DotProduct << std::endl;
 
 			delete[] array1;
 			delete[] array2;
 
-			std::cout << "Do you want to continue? Input Y/y to continue and input N/n to break£º";
+			std::cout << "Do you want to continue? Input Y/y to continue and input N/n to breakï¼š";
 			std::cin >> selectf;
 
 			if (selectf == 'Y'|| selectf == 'y')
@@ -85,7 +85,7 @@ int dotProduct()
 
 int crossProduct()
 {
-	char selectf;  // Ñ¡Ôñ±äÁ¿
+	char selectf;  // é€‰æ‹©å˜é‡
 	while (true)
 	{
 		float* CrossProductarray = new float[ArraySize] {0};
@@ -117,7 +117,7 @@ int crossProduct()
 		delete[] array3;
 		delete[] array4;
 
-		std::cout << "Do you want to continue? Input Y to continue and input N to break£º";
+		std::cout << "Do you want to continue? Input Y to continue and input N to breakï¼š";
 		std::cin >> selectf;
 
 		if (selectf == 'Y')
