@@ -17,7 +17,6 @@ int main()
         else if (N >= 10)
         {
             std::cout << "N is too large! Please input it again: ";
-            std::cin >> N;
             continue;
         }
 
