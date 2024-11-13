@@ -3,12 +3,12 @@
 
 int main()
 {
-    int N = 0;
-    std::cout << "Please input N (0 < N < 10): ";
-    std::cin >> N;
-
-    while (true)
+     while (true)
     {
+        int N = 0;
+        std::cout << "Please input N (0 < N < 10): ";
+        std::cin >> N;
+        
         if (N <= 0)
         {
             std::cout << "N is negative or zero! Break!" << std::endl;
