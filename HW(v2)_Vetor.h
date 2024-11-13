@@ -1,6 +1,6 @@
 //#pragma once
 
-//·À»¤ºê¶¨Òå
+//Â·Ã€Â»Â¤ÂºÃªÂ¶Â¨Ã’Ã¥
 #ifndef MATH_H
 #define MATH_H
 
